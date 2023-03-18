@@ -2,7 +2,7 @@ import { Octokit } from "@octokit/rest";
 
 const octokit = new Octokit({
     // Replace personal access token for auth with your own for better rate limit.
-    auth: process.env.REACT_APP_GH,
+    auth: process.env.REACT_APP_HUB,
     userAgent: 'gistsAPITest'
 })
 

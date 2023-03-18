@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import Octicon from 'react-octicon'
 
-const Search = () => {
+const Search = ({ setUsername }) => {
   return (
     <Wrapper>
       <InputBox>
-      <Octicon name="search" />
-      <Input placeholder="Search Gists for the username"/>
+        <Octicon name="search" />
+        {/* onChange picks up every character update when typing in the search field */}
+        <Input placeholder="Search Gists for the username" onChange={event => setUsername(event.target.value)}/>
       </InputBox>
     </Wrapper>
   )

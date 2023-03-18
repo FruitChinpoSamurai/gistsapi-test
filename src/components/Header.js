@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import Octicon from 'react-octicon'
 import Search from './Search';
 
-function Header() {
+function Header({ setUsername }) {
   return (
     <Wrapper>
       <Octicon name="mark-github" mega/>
-      <Search />
+      {/* Just passing setUsername ahead. */}
+      <Search setUsername={setUsername}/>
     </Wrapper>
   )
 }
